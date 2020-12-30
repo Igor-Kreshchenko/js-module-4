@@ -1,1 +1,2 @@
-# js-module-4
+# js-test
+JavaScript testing

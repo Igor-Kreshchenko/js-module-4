@@ -13,7 +13,6 @@ function composeMessage(position) {
 
 console.log(composeMessage.call(orders, 2));
 
-// const messages = orders.map(composeMessage.call(orders));
-const messages = [];
-messages = orders.map(composeMessage(position).call(orders, 2));
+const messages = [].map.call(orders, composeMessage());
+
 console.log(messages);

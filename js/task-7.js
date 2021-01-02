@@ -4,6 +4,8 @@ const orders = [
   { email: "jacob@mail.com", dish: "Taco" },
 ];
 
+console.log(orders[0].dish);
+
 // Пиши код ниже этой строки
 function composeMessage(position) {
   return `Готовим ${this[position - 1].dish} для ${
@@ -13,6 +15,10 @@ function composeMessage(position) {
 
 console.log(composeMessage.call(orders, 2));
 
-const messages = [].map.call(orders, composeMessage());
+
+const messages = orders.map(function (message, index) {
+  return composeMessage.call(orders, index + 1);
+});
+
 
 console.log(messages);
